@@ -15,16 +15,59 @@ body {
   height: 100px;
 }
 
-.logo-link {
-  display: inline-flex;
-  align-items: center;
-  height: 100%;
+/* Container needed to position the dropdown content correctly */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.logo-img {
+/* Remove default button styles to make the image stand out */
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+}
+
+/* Style and size your image button */
+.btn-image {
+  width: 150px;
   height: 150px;
-  width: auto;
   object-fit: contain;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0; /* Aligns the dropdown menu to the right edge of the image */
+  background-color: #f7ff83;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Gives the menu a card depth */
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #7b5c76;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu when hovering over the container */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .gallery {
@@ -104,12 +147,12 @@ body {
     transform: translateX(-50%) translateY(0);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 786px) {
     .image-container {
         column-count: 2;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 384px) {
     .image-container {
         column-count: 1;
     }
